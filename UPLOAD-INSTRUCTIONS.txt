@@ -1,0 +1,10 @@
+UPLOAD THE CONTENTS OF THIS FOLDER TO THE ROOT OF YOUR GITHUB REPOSITORY.
+
+The repository root must contain:
+- index.html
+- assets/
+- learning.html and the other HTML files
+- .nojekyll
+
+Do not upload only the HTML files. The assets folder contains the stylesheet, JavaScript and images.
+GitHub Pages settings: main branch, /(root).
