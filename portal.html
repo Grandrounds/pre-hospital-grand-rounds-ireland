@@ -1,1 +1,132 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member Portal | Pre-Hospital Grand Rounds Ireland</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"></head><body><main class="portal-shell"><section class="portal-visual"><a class="brand footer-brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 64 64"><path d="M29 4h6v18h18v6H35v18h-6V28H11v-6h18z"/><path class="pulse" d="M5 43h12l5-10 8 18 8-25 6 17h15"/></svg></span><span><strong>Pre-Hospital</strong><span>Grand Rounds Ireland</span></span></a><div><div class="eyebrow">Verified member access</div><h1>Continue your professional learning.</h1><p>This screen is a design prototype. Authentication must be connected to a secure identity and database service before launch.</p></div><small>Learning · Cases · Community · CPD</small></section><section class="portal-form-wrap"><form class="portal-form" onsubmit="event.preventDefault();document.getElementById('login-note').textContent='Prototype only — secure authentication is not yet connected.'"><a class="back-link" href="index.html">← Return to website</a><h2>Member login</h2><p>Access the learning centre and professional community.</p><label>Email address<input type="email" autocomplete="email" required></label><label>Password<input type="password" autocomplete="current-password" required></label><div class="helper"><label style="margin:0;font-weight:500"><input type="checkbox"> Remember me</label><a href="#">Forgot password?</a></div><button class="button button-primary full" type="submit">Sign in securely</button><p id="login-note" class="form-note"></p><hr style="border:0;border-top:1px solid #dbe3e5;margin:24px 0"><p>Not yet a verified member?</p><a class="button full" style="border-color:#cfdadd" href="index.html#membership">Apply for membership</a></form></section></main></body></html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Member Portal | Pre-Hospital Grand Rounds Ireland</title>
+<meta name="description" content="Professional pre-hospital education in Ireland.">
+<style>
+:root{
+  --navy:#071a2b;--navy2:#0c2942;--blue:#0b5fa5;--cyan:#28b7cf;
+  --green:#0e7c66;--lime:#c9ef4f;--red:#d8353f;--white:#fff;
+  --ink:#132131;--muted:#607081;--bg:#f3f7fa;--card:#fff;
+  --line:#dce5eb;--shadow:0 18px 50px rgba(7,26,43,.12);
+  --radius:18px;--max:1180px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 34px));margin:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:15px;top:15px;background:#fff;padding:10px;z-index:9999}
+.topbar{background:var(--navy);color:#d9e7f1;font-size:.88rem}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;padding:8px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);line-height:1.05}
+.brand-mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,var(--navy2),var(--blue));position:relative;box-shadow:0 8px 20px rgba(11,95,165,.25)}
+.brand-mark:before,.brand-mark:after{content:"";position:absolute;background:#fff;border-radius:2px}
+.brand-mark:before{width:26px;height:8px;left:10px;top:19px}
+.brand-mark:after{width:8px;height:26px;left:19px;top:10px}
+.brand small{display:block;font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;gap:22px;align-items:center;margin:0;padding:0;font-weight:700;font-size:.94rem}
+nav a:hover,nav a[aria-current="page"]{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:800;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(11,95,165,.24)}
+.btn-primary:hover{background:#084d88}
+.btn-outline{border-color:#bdd0df;background:#fff;color:var(--navy)}
+.menu-btn{display:none;background:none;border:0;font-size:1.7rem}
+.hero{min-height:660px;display:grid;align-items:center;color:#fff;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,26,43,.96) 0%,rgba(7,26,43,.86) 48%,rgba(7,26,43,.28) 100%),url('images/ambulance.png') center/cover}
+.hero:after{content:"";position:absolute;inset:auto -120px -200px auto;width:480px;height:480px;border:80px solid rgba(40,183,207,.13);border-radius:50%}
+.hero-content{position:relative;z-index:2;max-width:760px;padding:90px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:#91e5ef}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--cyan)}
+h1,h2,h3{font-family:Georgia,serif;color:var(--navy);line-height:1.12}
+.hero h1{font-size:clamp(2.6rem,6vw,5.3rem);color:#fff;margin:18px 0 20px;max-width:850px}
+.hero p{font-size:1.2rem;max-width:700px;color:#d7e5ef}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .btn-outline{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}
+.stats{margin-top:-48px;position:relative;z-index:4}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.stat{padding:25px;border-right:1px solid var(--line)}.stat:last-child{border:0}
+.stat strong{display:block;font-size:1.4rem;color:var(--navy)}.stat span{color:var(--muted);font-size:.9rem}
+section{padding:84px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.section-head h2,.page-hero h1{font-size:clamp(2.1rem,4vw,3.5rem);margin:8px 0}
+.section-head p{max-width:620px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 24px rgba(7,26,43,.05);transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:#e8f5fb;color:var(--blue);font-weight:900}
+.card h3{font-size:1.35rem;margin:17px 0 8px}.card p{color:var(--muted);margin:0}
+.dark{background:var(--navy);color:#dce8ef}.dark h2,.dark h3{color:#fff}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.media-stack{position:relative;padding:0 28px 30px 0}
+.media-stack img{border-radius:22px;box-shadow:var(--shadow)}
+.media-stack img+img{position:absolute;width:48%;right:0;bottom:0;border:7px solid #fff}
+.list{display:grid;gap:14px;margin:26px 0}.list div{display:flex;gap:12px}.check{color:var(--green);font-weight:900}
+.band{background:linear-gradient(120deg,var(--blue),var(--green));color:#fff;border-radius:24px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.band h2{color:#fff;margin:0}
+.page-hero{padding:90px 0;background:linear-gradient(130deg,#e8f5fb,#f8fbfd);border-bottom:1px solid var(--line)}
+.page-hero p{max-width:760px;font-size:1.12rem;color:var(--muted)}
+.content{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px}
+.content h2{margin-top:0}.content h3{margin-top:30px}
+.two-col{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+.sidebar{display:grid;gap:18px}.sidebar .card{padding:22px}
+.tag{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8f5fb;color:var(--blue);font-size:.78rem;font-weight:800;margin:3px}
+.course-card{overflow:hidden;padding:0}.course-card img{height:190px;width:100%;object-fit:cover}.course-card .body{padding:23px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.form{display:grid;gap:16px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:700;font-size:.92rem}input,select,textarea{width:100%;padding:13px;border:1px solid #becdd8;border-radius:10px;font:inherit;background:#fff}textarea{min-height:140px}
+.notice{padding:16px;border-left:4px solid var(--cyan);background:#eef9fb;border-radius:8px;color:#27485a}
+footer{background:#061522;color:#bfd0dc;padding:58px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:34px}
+footer h3{color:#fff;font-family:Inter,Arial,sans-serif;font-size:1rem}footer a{display:block;margin:8px 0;color:#bfd0dc}footer a:hover{color:#fff}
+.footer-bottom{border-top:1px solid #244052;margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;font-size:.86rem}
+@media(max-width:950px){
+ nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:22px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}
+ nav ul.open{display:flex}.menu-btn{display:block}.nav>.btn{display:none}
+ .grid{grid-template-columns:repeat(2,1fr)}.split,.two-col{grid-template-columns:1fr}
+ .stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+ .topbar .container{display:block}.hero{min-height:600px;background-position:62% center}.hero-content{padding:70px 0}
+ .grid,.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}
+ .section-head,.band,.footer-bottom{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}
+ section{padding:64px 0}.page-hero{padding:65px 0}
+}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="container"><span>Professional education for Ireland’s pre-hospital community</span><span>Evidence-led • Clinician-led • Practice-focused</span></div></div>
+<header>
+ <div class="container nav">
+  <a class="brand" href="index.html"><span class="brand-mark"></span><span>Pre-Hospital Grand Rounds<small>Ireland</small></span></a>
+  <nav aria-label="Main navigation"><button class="menu-btn" aria-expanded="false" aria-label="Open menu">☰</button><ul><li><a href="index.html">Home</a></li><li><a href="learning.html">Learning</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="grand-rounds.html">Grand Rounds</a></li><li><a href="resources.html">Resources</a></li><li><a href="community.html">Community</a></li><li><a href="about.html">About</a></li><li><a href="portal.html">Member Login</a></li></ul></nav>
+  <a class="btn btn-primary" href="membership.html">Join the community</a>
+ </div>
+</header><main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">Pre-Hospital Grand Rounds Ireland</div><h1>Member Portal</h1><p>Secure learning and CPD access</p></div></section><section><div class="container"><div class="split"><div><h2>Your learning, evidence and community in one place.</h2><p>The production portal will provide secure authentication, course enrolment, assessments, certificates, CPD records, forum access and membership status.</p></div>
+<div class="card"><h3>Member login</h3><form class="form" data-demo><label>Email<input type="email"></label><label>Password<input type="password"></label><button class="btn btn-primary">Sign in</button><a href="#">Forgotten password?</a></form></div></div></div></section></main>
+<footer><div class="container">
+ <div class="footer-grid">
+  <div><div class="brand" style="color:white"><span class="brand-mark"></span><span>Pre-Hospital Grand Rounds<small style="color:#9fb6c5">Ireland</small></span></div><p>Independent, multidisciplinary education for professionals delivering emergency and urgent care before the hospital door.</p></div>
+  <div><h3>Learn</h3><a href="learning.html">Learning centre</a><a href="case-studies.html">Clinical cases</a><a href="resources.html">Resources</a></div>
+  <div><h3>Participate</h3><a href="grand-rounds.html">Grand rounds</a><a href="community.html">Community</a><a href="submit-case.html">Submit a case</a></div>
+  <div><h3>Organisation</h3><a href="about.html">About</a><a href="governance.html">Governance</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+ </div>
+ <div class="footer-bottom"><span>© 2026 Pre-Hospital Grand Rounds Ireland</span><span>Educational content does not replace local clinical governance or guidelines.</span></div>
+</div></footer><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.menu-btn');
+  const menu = document.querySelector('nav ul');
+  if (button && menu) {
+    button.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(open));
+    });
+  }
+  document.querySelectorAll('form[data-demo]').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('This is the public website prototype. Secure form processing will be connected before launch.');
+    });
+  });
+});
+</script></body></html>
