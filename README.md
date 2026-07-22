@@ -1,12 +1,12 @@
-# Pre-Hospital Grand Rounds Ireland
+# EMS E Café — Pre-Hospital Grand Rounds Ireland
 
-Static GitHub Pages prototype.
+Version 3 applies the supplied EMS E Café identity and a professional warm café/library visual system.
 
-## Publish
-Upload every file and the `images` folder to the repository root.  
-In **Settings → Pages**, select **Deploy from a branch**, `main`, `/(root)`.
+Upload every file and the complete `images` folder to the repository root.
 
-This version embeds all CSS and JavaScript inside each HTML page, so it cannot fail because a separate stylesheet was omitted.
+GitHub Pages:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)
 
-## Important
-The forms, login and membership functions are prototypes only. Do not collect sensitive personal or professional verification documents through GitHub Pages.
+The public site is static. Login, verification, e-learning records and discussion functions require a secure backend before launch.
