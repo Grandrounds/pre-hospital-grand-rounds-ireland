@@ -3,9 +3,9 @@ IMPORTANT: REMOVE THE OLD REPOSITORY FILES FIRST.
 Then upload every file and folder from this package to the repository root, including:
 
 - all HTML pages
-- theme-v11.css
-- app-v11.js
+- theme-v12.css
+- app-v12.js
 - the complete images folder
 - the complete vendor folder
 
-Do not upload only index.html. The V11 filenames prevent GitHub Pages and browsers from mixing this release with older cached assets.
+Do not upload only index.html. The V12 filenames prevent GitHub Pages and browsers from mixing this release with older cached assets.
