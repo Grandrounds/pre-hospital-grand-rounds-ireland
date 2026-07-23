@@ -1,5 +1,14 @@
-# EMS E Café — Version 4
+# EMS E Café — Version 10
 
-Professional café-inspired redesign with a refined navigation system, animated fill-and-glow hover states, responsive mobile menu and stronger EMS visual identity.
+Final concept-theme correction:
+- Trust bar no longer overlaps the hero panel or buttons.
+- Navigation dropdown “v” symbols removed.
+- Desktop, tablet and mobile spacing adjusted.
+- Cache-safe CSS and JavaScript filenames included.
 
-Upload all files and the complete `images` folder to the repository root. GitHub Pages: main branch → /(root).
+Upload every file and the complete `images` folder to the repository root.
+
+GitHub Pages:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)

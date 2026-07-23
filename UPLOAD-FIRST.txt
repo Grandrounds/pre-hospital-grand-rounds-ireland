@@ -1,4 +1,4 @@
-UPLOAD THE CONTENTS OF THIS FOLDER TO THE GITHUB REPOSITORY ROOT.
+IMPORTANT: DELETE THE OLD REPOSITORY FILES FIRST.
 
-Required: all HTML files, styles.css, script.js, images/, .nojekyll.
-Then deploy GitHub Pages from main branch → /(root).
+Then upload ALL files and the complete images folder from this ZIP to the repository root.
+Do not merge only selected files. New V9 filenames are used to prevent the browser loading older cached CSS or hero assets.
