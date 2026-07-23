@@ -1,4 +1,11 @@
-IMPORTANT: DELETE THE OLD REPOSITORY FILES FIRST.
+IMPORTANT: REMOVE THE OLD REPOSITORY FILES FIRST.
 
-Then upload ALL files and the complete images folder from this ZIP to the repository root.
-Do not merge only selected files. New V9 filenames are used to prevent the browser loading older cached CSS or hero assets.
+Then upload every file and folder from this package to the repository root, including:
+
+- all HTML pages
+- theme-v11.css
+- app-v11.js
+- the complete images folder
+- the complete vendor folder
+
+Do not upload only index.html. The V11 filenames prevent GitHub Pages and browsers from mixing this release with older cached assets.

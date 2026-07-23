@@ -1,14 +1,22 @@
-# EMS E Café — Version 10
+# EMS E Café — Version 11
 
-Final concept-theme correction:
-- Trust bar no longer overlaps the hero panel or buttons.
-- Navigation dropdown “v” symbols removed.
-- Desktop, tablet and mobile spacing adjusted.
-- Cache-safe CSS and JavaScript filenames included.
+This GitHub Pages package preserves the existing EMS E Café content and pages while updating the visual presentation to the approved clean white-and-green concept.
 
-Upload every file and the complete `images` folder to the repository root.
+## Version 11 changes
 
-GitHub Pages:
-- Source: Deploy from a branch
-- Branch: main
-- Folder: /(root)
+- New high-resolution concept hero with crisp medical-book titles, realistic equipment, and clean ambulance markings.
+- Professional Lucide line icons replace placeholder letters and unsupported symbol glyphs.
+- Rebuilt homepage styling with a white glass hero card, green pill navigation, trust panel, feature cards, community call-to-action, and full footer.
+- Trust panel spacing prevents overlap with the hero text and buttons.
+- Responsive navigation, hero, cards, forms, content layouts, and footer for desktop, tablet, and mobile.
+- Keyboard-friendly mobile menu, visible focus states, reduced-motion support, and descriptive image text.
+- Cache-safe V11 asset names.
+
+## GitHub Pages
+
+1. Remove the old repository files.
+2. Upload every file and folder from this package to the repository root.
+3. In repository settings, choose **Pages → Deploy from a branch**.
+4. Select the **main** branch and **/(root)** folder.
+
+The website uses static HTML, CSS, and JavaScript. It requires no build step.
