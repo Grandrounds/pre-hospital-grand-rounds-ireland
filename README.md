@@ -1,5 +1,14 @@
-# EMS E Café V9
+# EMS E Café — Version 10
 
-This build uses new asset names (`theme-v9.css`, `app-v9.js`, and `ems-concept-hero-v9.jpg`) to bypass cached V7/V8 files.
+Final concept-theme correction:
+- Trust bar no longer overlaps the hero panel or buttons.
+- Navigation dropdown “v” symbols removed.
+- Desktop, tablet and mobile spacing adjusted.
+- Cache-safe CSS and JavaScript filenames included.
 
-Delete the old repository contents first, then upload every file and the complete `images` folder from this package to the repository root.
+Upload every file and the complete `images` folder to the repository root.
+
+GitHub Pages:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)
