@@ -1,20 +1,4 @@
-UPLOAD THE CONTENTS OF THIS FOLDER — NOT THE FOLDER ITSELF.
+UPLOAD THE CONTENTS OF THIS FOLDER TO THE GITHUB REPOSITORY ROOT.
 
-Your GitHub repository root must contain:
-index.html
-learning.html
-case-studies.html
-grand-rounds.html
-resources.html
-community.html
-about.html
-membership.html
-portal.html
-submit-case.html
-governance.html
-contact.html
-privacy.html
-images/
-.nojekyll
-
-Then deploy: main branch → /(root)
+Required: all HTML files, styles.css, script.js, images/, .nojekyll.
+Then deploy GitHub Pages from main branch → /(root).

@@ -1,12 +1,5 @@
-# EMS E Café — Pre-Hospital Grand Rounds Ireland
+# EMS E Café — Version 4
 
-Version 3 applies the supplied EMS E Café identity and a professional warm café/library visual system.
+Professional café-inspired redesign with a refined navigation system, animated fill-and-glow hover states, responsive mobile menu and stronger EMS visual identity.
 
-Upload every file and the complete `images` folder to the repository root.
-
-GitHub Pages:
-- Source: Deploy from a branch
-- Branch: main
-- Folder: /(root)
-
-The public site is static. Login, verification, e-learning records and discussion functions require a secure backend before launch.
+Upload all files and the complete `images` folder to the repository root. GitHub Pages: main branch → /(root).

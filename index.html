@@ -1,117 +1,8 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home | EMS E Café</title><meta name="description" content="Professional pre-hospital education and clinical discussion in Ireland.">
-<style>
-:root{
-  --espresso:#23160f;
-  --coffee:#4c2d1d;
-  --walnut:#6a432a;
-  --cream:#f7f0e4;
-  --paper:#fffdf9;
-  --green:#087a4b;
-  --red:#a92e2e;
-  --gold:#c79a55;
-  --ink:#261e19;
-  --muted:#6f6259;
-  --line:#dfd2c3;
-  --soft:#f3eadf;
-  --max:1220px;
-  --radius:16px;
-  --shadow:0 16px 42px rgba(35,22,15,.14);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:#fff;padding:10px;z-index:1000}
-.utility{background:var(--espresso);color:#eadfce;font-size:.82rem;border-bottom:1px solid rgba(255,255,255,.1)}
-.utility .container{display:flex;justify-content:space-between;gap:24px;padding:7px 0}
-header{background:rgba(255,253,249,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
-.navbar{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:26px}
-.brand{display:flex;align-items:center;gap:14px;color:var(--espresso);font-weight:800;line-height:1.02}
-.brand-logo{width:66px;height:50px;object-fit:cover;border-radius:10px;border:1px solid #cdbba9;box-shadow:0 5px 14px rgba(35,22,15,.15)}
-.brand small{display:block;font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-nav ul{display:flex;gap:25px;list-style:none;margin:0;padding:0;align-items:center;font-size:.91rem;font-weight:700}
-nav a{padding:31px 0 28px;border-bottom:3px solid transparent}
-nav a:hover,nav a[aria-current="page"]{color:var(--green);border-color:var(--green)}
-.menu-btn{display:none;border:0;background:none;font-size:1.7rem}
-.header-action{padding:11px 16px;border-radius:10px;background:var(--espresso);color:#fff;font-weight:800}
-.header-action:hover{background:var(--coffee)}
-.hero{min-height:620px;display:flex;align-items:flex-end;color:#fff;background:
-linear-gradient(90deg,rgba(22,12,7,.90) 0%,rgba(22,12,7,.72) 46%,rgba(22,12,7,.28) 100%),
-url('images/ems-cafe-hero.jpg') center/cover}
-.hero-inner{padding:104px 0 82px;max-width:760px}
-.kicker{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:#efd0a4;display:flex;align-items:center;gap:10px}
-.kicker:before{content:"";width:34px;height:2px;background:var(--gold)}
-h1,h2,h3{margin-top:0;color:var(--espresso);line-height:1.15}
-h1,h2{font-family:Georgia,"Times New Roman",serif}
-.hero h1{font-size:clamp(2.8rem,5.3vw,4.9rem);color:#fff;margin:18px 0 22px;max-width:800px;text-shadow:0 3px 18px rgba(0,0,0,.28)}
-.hero p{font-size:1.15rem;max-width:680px;color:#f1e8dc;margin:0 0 28px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:800;border:1px solid transparent}
-.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:#06633d}
-.btn-secondary{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(35,22,15,.36)}
-.trust-strip{background:var(--paper);border-bottom:1px solid var(--line)}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust-item{padding:23px 26px;border-right:1px solid var(--line)}
-.trust-item:last-child{border-right:0}.trust-item strong{display:block;color:var(--espresso);margin-bottom:3px}.trust-item span{font-size:.88rem;color:var(--muted)}
-section{padding:82px 0}
-.section-head{max-width:780px;margin-bottom:36px}
-.section-head h2,.page-hero h1{font-size:clamp(2.2rem,4vw,3.4rem);margin:10px 0 14px}
-.section-head p,.page-hero p{color:var(--muted);font-size:1.05rem}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 7px 22px rgba(35,22,15,.05)}
-.card:hover{box-shadow:var(--shadow);transform:translateY(-2px);transition:.2s}
-.card h3{font-size:1.28rem;margin:18px 0 9px}.card p{margin:0;color:var(--muted)}
-.icon{width:44px;height:44px;border-radius:11px;background:var(--soft);display:grid;place-items:center;color:var(--green);font-weight:900;border:1px solid #e0d1c1}
-.split{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
-.media{position:relative}.media img{border-radius:18px;box-shadow:var(--shadow)}
-.media img+img{position:absolute;width:44%;right:-12px;bottom:-30px;border:6px solid var(--paper)}
-.dark-section{background:linear-gradient(135deg,var(--espresso),#3b2418);color:#eadfce}
-.dark-section h2,.dark-section h3{color:#fff}
-.list{display:grid;gap:14px;margin:24px 0}.list div{display:flex;gap:12px}.tick{font-weight:900;color:#7ac89f}
-.content-band{background:linear-gradient(120deg,#f5ecdf,#fffaf3);border:1px solid var(--line);border-radius:18px;padding:34px;display:flex;justify-content:space-between;gap:28px;align-items:center}
-.content-band h2{margin-bottom:8px}
-.page-hero{background:linear-gradient(135deg,#efe2d3,#fffaf3);padding:72px 0;border-bottom:1px solid var(--line)}
-.two-col{display:grid;grid-template-columns:2fr 1fr;gap:28px}
-.content{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px}
-.sidebar{display:grid;gap:18px}
-.tag{display:inline-block;background:#edf5ef;color:var(--green);font-size:.76rem;font-weight:800;padding:5px 9px;border-radius:999px;margin:2px}
-.course-card{padding:0;overflow:hidden}.course-card img{height:180px;width:100%;object-fit:cover}.course-card .body{padding:24px}
-.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
-.notice{padding:16px 18px;border-left:4px solid var(--red);background:#fbefec;border-radius:8px}
-.form{display:grid;gap:16px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{font-size:.9rem;font-weight:700}input,select,textarea{width:100%;margin-top:6px;padding:13px;border:1px solid #cbbcac;border-radius:9px;font:inherit;background:#fff}textarea{min-height:140px}
-footer{background:#1b100b;color:#d7c8b7;padding:56px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.7fr repeat(3,1fr);gap:36px}
-footer h3{font-family:Arial,Helvetica,sans-serif;color:#fff;font-size:.95rem}
-footer a{display:block;color:#d7c8b7;margin:8px 0;font-size:.9rem}footer a:hover{color:#fff}
-.footer-bottom{border-top:1px solid #4b3729;margin-top:34px;padding-top:18px;display:flex;justify-content:space-between;gap:25px;font-size:.82rem}
-@media(max-width:980px){
- nav ul{display:none;position:absolute;top:88px;left:0;right:0;background:var(--paper);padding:20px 30px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start;gap:4px}
- nav ul.open{display:flex}nav a{padding:10px 0}.menu-btn{display:block}.header-action{display:none}
- .grid{grid-template-columns:repeat(2,1fr)}.split,.two-col{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}
- .trust-item:nth-child(2){border-right:0}.footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:650px){
- .utility .container{display:block}.grid,.form-row,.trust-grid{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line)}
- .hero{min-height:560px;background-position:54% center}.hero-inner{padding:76px 0 58px}.hero h1{font-size:2.65rem}
- .content-band,.footer-bottom{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr}
- section{padding:62px 0}.page-hero{padding:58px 0}.container{width:min(var(--max),calc(100% - 28px))}
-}
-</style></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="utility"><div class="container"><span>Independent education for Ireland’s pre-hospital community</span><span>Evidence · Empathy · Education · Excellence</span></div></div>
-<header><div class="container navbar">
-<a class="brand" href="index.html"><img class="brand-logo" src="images/ems-cafe-logo.jpg" alt="EMS E Café logo"><span>EMS E Café<small>Pre-Hospital Grand Rounds Ireland</small></span></a>
-<nav aria-label="Main navigation"><button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="learning.html">Learning Café</a></li><li><a href="case-studies.html">Case Discussions</a></li><li><a href="grand-rounds.html">Grand Rounds</a></li><li><a href="resources.html">Reference Library</a></li><li><a href="community.html">The Break Room</a></li><li><a href="about.html">About</a></li><li><a href="portal.html">Learning Portal</a></li></ul></nav>
-<a class="header-action" href="grand-rounds.html">Upcoming sessions</a>
-</div></header><main id="main">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | EMS E Café</title><meta name="description" content="Professional pre-hospital education and clinical discussion in Ireland."><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><div class="utility"><div class="container"><span>Independent education for Ireland’s pre-hospital community</span><span>Evidence · Empathy · Education · Excellence</span></div></div><header><div class="container navbar"><a class="brand" href="index.html"><img class="brand-logo" src="images/ems-cafe-logo.jpg" alt="EMS E Café logo"><span>EMS E Café<small>Pre-Hospital Grand Rounds Ireland</small></span></a><nav aria-label="Main navigation"><button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="learning.html">Learning Café</a></li><li><a href="case-studies.html">Case Discussions</a></li><li><a href="grand-rounds.html">Grand Rounds</a></li><li><a href="resources.html">Library</a></li><li><a href="community.html">Break Room</a></li><li><a href="about.html">About</a></li><li><a href="portal.html">Portal</a></li></ul></nav><a class="header-action" href="grand-rounds.html">Upcoming sessions</a></div></header><main id="main">
 <section class="hero"><div class="container hero-inner">
 <div class="kicker">Welcome to the EMS E Café</div>
-<h1>Where pre-hospital professionals come to learn, reflect and exchange ideas.</h1>
-<p>A warm, credible and multidisciplinary learning environment for clinicians, educators and students across emergency and pre-hospital care in Ireland.</p>
+<h1>Where Ireland’s pre-hospital professionals learn together.</h1>
+<p>Independent education, Grand Rounds and clinical discussion for Ireland’s pre-hospital community.</p>
 <div class="actions"><a class="btn btn-primary" href="learning.html">Enter the learning café</a><a class="btn btn-secondary" href="grand-rounds.html">View upcoming grand rounds</a></div>
 </div></section>
 <div class="trust-strip"><div class="container trust-grid">
@@ -131,32 +22,18 @@ footer a{display:block;color:#d7c8b7;margin:8px 0;font-size:.9rem}footer a:hover
 <a class="card" href="portal.html"><div class="icon">06</div><h3>Your learning record</h3><p>Access completed activities, certificates, reflections and discussion history in one secure place.</p></a>
 </div></div></section>
 <section class="dark-section"><div class="container split">
-<div class="media"><img src="images/ems-cafe-hero.jpg" alt="EMS E Café learning environment"><img src="images/air-ambulance.png" alt="Irish community air ambulance"></div>
+<div class="media"><img alt="EMS E Café learning environment" src="images/ems-cafe-hero.jpg"/><img alt="Irish community air ambulance" src="images/air-ambulance.png"/></div>
 <div><div class="kicker">Case-based learning</div><h2>Good clinical discussion starts with curiosity, not certainty.</h2><p>Each case explores the assessment, decisions, communication, treatment, escalation and system factors that shaped care—without reducing learning to a final diagnosis.</p>
 <div class="list"><div><span class="tick">✓</span><span>Cases fully de-identified before review</span></div><div><span class="tick">✓</span><span>Clinically reviewed learning points</span></div><div><span class="tick">✓</span><span>Structured reflection and discussion prompts</span></div></div>
 <a class="btn btn-primary" href="case-studies.html">Explore case discussions</a></div>
 </div></section>
 <section><div class="container"><div class="content-band"><div><h2>Bring something to the table.</h2><p>Present a case, propose a grand-rounds topic, contribute a journal review or facilitate a professional discussion.</p></div><a class="btn btn-primary" href="contact.html">Get involved</a></div></div></section>
-</main>
-<footer><div class="container">
+</main><footer><div class="container">
 <div class="footer-grid">
-<div><div class="brand" style="color:white"><img class="brand-logo" src="images/ems-cafe-logo.jpg" alt=""><span>EMS E Café<small style="color:#b9a896">Pre-Hospital Grand Rounds Ireland</small></span></div><p>A welcoming professional space for pre-hospital education, case-based learning and clinical discussion.</p></div>
+<div><div class="brand" style="color:white"><img alt="" class="brand-logo" src="images/ems-cafe-logo.jpg"/><span>EMS E Café<small style="color:#b9a896">Pre-Hospital Grand Rounds Ireland</small></span></div><p>A welcoming professional space for pre-hospital education, case-based learning and clinical discussion.</p></div>
 <div><h3>Learn</h3><a href="learning.html">Learning café</a><a href="case-studies.html">Case discussions</a><a href="resources.html">Reference library</a></div>
 <div><h3>Take part</h3><a href="grand-rounds.html">Grand rounds</a><a href="community.html">The break room</a><a href="submit-case.html">Submit a case</a></div>
 <div><h3>Governance</h3><a href="about.html">About</a><a href="governance.html">Clinical governance</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
 </div>
 <div class="footer-bottom"><span>© 2026 EMS E Café · Pre-Hospital Grand Rounds Ireland</span><span>Educational content does not replace local clinical guidelines, professional scope or medical direction.</span></div>
-</div></footer><script>
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.querySelector('.menu-btn');
-  const menu = document.querySelector('nav ul');
-  if (button && menu) button.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    button.setAttribute('aria-expanded', String(open));
-  });
-  document.querySelectorAll('form[data-demo]').forEach(form => form.addEventListener('submit', e => {
-    e.preventDefault();
-    alert('This feature will be connected to the secure learning platform before launch.');
-  }));
-});
-</script></body></html>
+</div></footer><script src="script.js"></script></body></html>
