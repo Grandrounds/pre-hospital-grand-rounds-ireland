@@ -1,5 +1,5 @@
-# EMS E Café — Version 4
+# EMS E Café V9
 
-Professional café-inspired redesign with a refined navigation system, animated fill-and-glow hover states, responsive mobile menu and stronger EMS visual identity.
+This build uses new asset names (`theme-v9.css`, `app-v9.js`, and `ems-concept-hero-v9.jpg`) to bypass cached V7/V8 files.
 
-Upload all files and the complete `images` folder to the repository root. GitHub Pages: main branch → /(root).
+Delete the old repository contents first, then upload every file and the complete `images` folder from this package to the repository root.
